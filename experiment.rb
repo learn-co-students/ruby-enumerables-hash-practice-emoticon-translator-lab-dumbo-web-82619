@@ -1,7 +1,4 @@
-# require modules here
 require "yaml"
-
-
 
 def load_library(file_path)
   # code goes here
@@ -20,16 +17,4 @@ def load_library(file_path)
   outcome
 end
 
-def get_japanese_emoticon(file_path, emoticon)
-  # code goes here
-    emo_library = load_library(file_path)
-    # what procedure fixes the problem here?
-    emo_library["get_emoticon"].each do |e_emo, j_emo|
-      
-    end 
-    
-end
-
-def get_english_meaning
-  # code goes here
-end
+p load_library("./lib/emoticons.yml") 
