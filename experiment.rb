@@ -10,14 +10,13 @@ def load_library(file_path)
   }
 
   emo_file.each do |description, emo_face|
-    outcome['get_emoticon'][emo_face[0]] = emo_face[1]
-    outcome['get_meaning'][emo_face[1]] = description
+   
   end
 
-  outcome
+ 
 end
 
-
+p load_library("./lib/emoticons.yml")
  
   
 
