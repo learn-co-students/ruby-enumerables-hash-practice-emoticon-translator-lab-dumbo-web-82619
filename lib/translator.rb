@@ -22,14 +22,22 @@ end
 
 def get_japanese_emoticon(file_path, emoticon)
   # code goes here
-    emo_library = load_library(file_path)
-    # what procedure fixes the problem here?
-    emo_library["get_emoticon"].each do |e_emo, j_emo|
-      
-    end 
-    
+  emo_library = load_library(file_path)
+  
+  if emo_library["get_emoticon"][emoticon]
+    emo_library["get_emoticon"][emoticon]
+  else 
+    "Sorry, that emoticon was not found"
+  end
 end
 
-def get_english_meaning
+def get_english_meaning(file_path, emoticon)
   # code goes here
+  emo_library = load_library(file_path)
+  
+  if emo_library["get_meaning"][emoticon]
+    emo_library["get_meaning"][emoticon]
+  else
+    "Sorry, that emoticon was not found"
+  end 
 end
