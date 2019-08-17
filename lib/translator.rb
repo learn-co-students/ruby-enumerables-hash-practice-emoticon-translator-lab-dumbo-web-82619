@@ -3,9 +3,10 @@ require "yaml"
 require "pry"
 
 def load_library(filepath)
-  emoticons = YAML.load_file('emoticons.yml')
-  emoticons
-  binding.pry
+  library = {}
+  emoticons = YAML.load_file(filepath)
+  library = {get_meaning: emoticons.keys, get_emoticon: emoticons.values}
+  library
 end
 
 def get_japanese_emoticon
