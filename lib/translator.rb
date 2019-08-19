@@ -15,10 +15,20 @@ def load_library(filepath)
   #binding.pry
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon (filepath, emoticon)
   # code goes here
+  library = load_library(filepath)
+  if  library[:get_emoticon][emoticon]
+    library[:get_emoticon][emoticon]
+  else p "Sorry, that emoticon was not found"
+  end
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(filepath, emoticon)
+  library = load_library(filepath)
+  if library[:get_meaning][emoticon]
+    library[:get_meaning][emoticon]
+  else
+    p "Sorry, that emoticon was not found"
+  end
 end
