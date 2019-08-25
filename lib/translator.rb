@@ -35,6 +35,6 @@ def get_english_meaning(file, emojijapan)
       return text
     end
   end
-  "Sorry, that means nothing"
+  "Sorry, that emoticon was not found"
 end
 
